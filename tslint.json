@@ -5,6 +5,7 @@
     ],
     "jsRules": {},
     "rules": {
+        /*  */
         // "no-eval" : false ,                         // 동일한 스코프에서 변수를 다시 선언 가능
         "no-console" : false,                      // console 허용
         // "no-var-keyword" : true,                   // var 허용 안함    
@@ -55,16 +56,18 @@
             true,
             "allow-null-check"
         ],
-        "variable-name": [                          // 우발적으로 typescript 키워드를 사용하지 말아야 한다.     
-            true,
-            "ban-keywords",
-            "check-format"
-        ],
         "prefer-const": false,                       // true 일 경우 let 변수가 다시 값이 주어지지 않으면 const로 변경
         "object-literal-sort-keys": false,
         "interface-over-type-literal": true,
         "trailing-comma": [true, { "multiline": "always", "singleline": "never"}],
-        "no-shadowed-variable": false
+        "no-shadowed-variable": false,
+        
+        "variable-name": [                          // 우발적으로 typescript 키워드를 사용하지 말아야 한다.     
+            false,
+            "ban-keywords",
+            "check-format"
+        ]
+                
         /* 
         */
     },
