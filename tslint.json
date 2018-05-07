@@ -1,0 +1,72 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+        // "no-eval" : false ,                         // 동일한 스코프에서 변수를 다시 선언 가능
+        "no-console" : false,                      // console 허용
+        // "no-var-keyword" : true,                   // var 허용 안함    
+        "devel" : true,                            // alert, console 같은 개발 키워드 허용
+        "plusplus" : true,                         // ++ -- 허용
+        "bitwise" : true,                          // ^(xor) 연산자 금지
+        "curly" : true,                            // if while 문 중괄호 강제 
+        // "eqeqeq" : true,                        // == != 대신 === !== 를 사용
+        "newcap" : true,                           // new 생성자 함수 사용할때 대문자로 시작
+        "noempty" : true,                          // {} 빈블록의 사용 금지
+        "undef" : true,                            // 선언하지 않은 변수 사용시 에러
+        "unused" : true,                           // 변수를 선언하지 않고 사용하면 오류가 발생
+        //, "asi" : false                          // ; 빠지면 오류
+        "class-name": true,                        // 클래스와 interface 이름 구별
+	
+        "no-trailing-whitespace": false,           // 줄 끝에 공백이나 탭을 남기지 않음
+        "one-line": [                              // 중괄호가 앞에 있는 문장과 같은 줄에 있어야 하고 앞에 공백이 있어야 한다     
+            true,
+            "check-open-brace",
+            "check-whitespace"
+        ],
+        "quotemark": [                              // 문자열에 쌍따움표 사용
+            true,
+            "double"
+        ],
+        
+        "semicolon": true,                          // 세미콜론 강제
+        "comment-format": [                         // 슬래시와 주석 자제 사이 공백 (// 주석)
+            true,
+            "check-space"
+        ],
+        "indent": [                                 // 탭대신 space 사용 4칸 
+            true,
+            "spaces",
+            4
+        ],
+        "typedef-whitespace": [                     // 타입을 지정할때 콜론의 왼쪽에 공백이 없어야 한다
+            true,
+            {
+                "call-signature": "nospace",
+                "index-signature": "nospace",
+                "parameter": "nospace",
+                "property-declaration": "nospace",
+                "variable-declaration": "nospace"
+            }
+        ],
+        "triple-equals": [                          // null 체크하기 위해 == != 사용 허용
+            true,
+            "allow-null-check"
+        ],
+        "variable-name": [                          // 우발적으로 typescript 키워드를 사용하지 말아야 한다.     
+            true,
+            "ban-keywords",
+            "check-format"
+        ],
+        "prefer-const": false,                       // true 일 경우 let 변수가 다시 값이 주어지지 않으면 const로 변경
+        "object-literal-sort-keys": false,
+        "interface-over-type-literal": true,
+        "trailing-comma": [true, { "multiline": "always", "singleline": "never"}],
+        "no-shadowed-variable": false
+        /* 
+        */
+    },
+    "rulesDirectory": []
+}
